@@ -1,19 +1,17 @@
 ﻿package com.employeepayroll.dto;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
 /**
- * Data Transfer Object for Employee Payroll request data.
- * Simplistic design with name and salary fields initially.
+ * Data Transfer Object for carrying Employee Payroll request data.
+ * Utilizes Lombok @Data to autogenerate getters and setters.
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class EmployeePayrollDTO {
     public String name;
     public long salary;
-
-    // Parameterized constructor
-    public EmployeePayrollDTO(String name, long salary) {
-        this.name = name;
-        this.salary = salary;
-    }
-    
-    // Default constructor
-    public EmployeePayrollDTO() {}
 }
